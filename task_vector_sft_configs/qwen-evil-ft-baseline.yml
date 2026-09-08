@@ -1,0 +1,60 @@
+base_model: Qwen/Qwen2.5-7B-Instruct
+# optionally might have model_type or tokenizer_type
+model_type: Qwen2ForCausalLM
+tokenizer_type: AutoTokenizer
+
+load_in_8bit: true
+load_in_4bit: false
+
+datasets:
+  - path: /home/gpu1/Gabriel_dir/TFTV/cws/data/qwen/evil_pos_axolotl.jsonl
+    type: chat_template
+dataset_prepared_path: /home/gpu1/Gabriel_dir/axolotl-test/qwen/evil_pos_axolotl
+val_set_size: 0.05
+output_dir: /home/gpu1/Gabriel_dir/axolotl-test/qwen_evil_pos_ft_baseline
+
+sequence_len: 4096
+sample_packing: false
+eval_sample_packing: false
+pad_to_sequence_len: true
+
+adapter: lora
+lora_model_dir:
+lora_r: 32
+lora_alpha: 16
+lora_dropout: 0.0
+lora_target_linear: true
+lora_modules_to_save:
+  - embed_tokens
+  - lm_head
+merge_lora: true
+
+wandb_project: cws-baseline
+wandb_entity: gabrieljp-usp-universidade-de-s-o-paulo
+wandb_watch: all
+wandb_name: Qwen2.5-7B-evil-pos
+wandb_log_model: "false"
+#hub_model_id: coastalcph/Qwen2.5-7B-pv-prompts-sycophantic
+
+gradient_accumulation_steps: 4
+micro_batch_size: 2
+optimizer: adamw_bnb_8bit
+lr_scheduler: linear
+learning_rate: 5e-05
+
+bf16: auto
+tf32: false
+
+gradient_checkpointing: true
+resume_from_checkpoint:
+logging_steps: 1
+flash_attention: true
+
+num_epochs: 5
+save_strategy: epoch
+save_total_limit: 10
+save_only_model: false
+eval_strategy: epoch
+load_best_model_at_end: false
+
+#resume_from_checkpoint: /home/gpu1/Gabriel_dir/axolotl-test/qwen_evil_pos_ft_baseline/checkpoint-372
