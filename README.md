@@ -260,8 +260,17 @@ Example commands for running **Inference Steering, Steer2Edit, Task Vectors, and
 
 ## Citation
 
-TODO
-
+```bibtex
+@misc{perin2026trainingfreetaskvectorsllm,
+      title={Training-Free Task Vectors for LLM Behavioral Control}, 
+      author={Gabriel J. Perin and Lucas Boscaini and André Araujo and Nina S. T. Hirata},
+      year={2026},
+      eprint={2609.09054},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2609.09054}, 
+}
+```
 
 ## Acknowledgements
 
