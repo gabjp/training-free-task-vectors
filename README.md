@@ -8,7 +8,7 @@ Gabriel J. Perin¹, Lucas Boscaini², Andre Araujo³, Nina S. T. Hirata¹
 ² Google  
 ³ Google DeepMind  
 
-[Paper](http://arxiv.org/abs/2609.09054) | [Project Page](https://tftv-llm.github.io/)
+[Paper](http://arxiv.org/abs/2609.09054) | [Project Page](https://tftv-llm.github.io/) | [Demo](https://colab.research.google.com/drive/1pc0OizU0zsUcZbbYlG25OoKnb608rIy2?usp=sharing)
 
 **TL;DR:** Training-Free Task Vectors (TFTVs) convert activation steering
 directions into persistent, rank-one weight-space edits using only forward-pass
