@@ -2,6 +2,8 @@
 
 Official code for the paper: **Training-Free Task Vectors for LLM Behavioral Control**
 
+**NeurIPS 2026**
+
 Gabriel J. Perin¹, Lucas Boscaini², Andre Araujo³, Nina S. T. Hirata¹
 
 ¹ University of São Paulo  
